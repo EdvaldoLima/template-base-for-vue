@@ -13,7 +13,7 @@ yarn lint - lint
 
 ### A estrutura do projeto considera alguns pontos:
 
-1 - Todos o fluxo de dados será centralizado no gereciamento de estago global (Vuex, Pinia, ...)
+1 - Todo o fluxo de dados será centralizado no gereciamento de estago global (Vuex, Pinia, ...)
   - A camada de **actions** irá centralizar todas a chamadas de API dentro do projeto.
   - A camada de mutations...
   - A camada de getters...
@@ -25,7 +25,7 @@ A estrutura do projeto considera que, a "store" estará disponível para todos o
 
 2 - A estrutura de pastas considera um "contexto" para toda a sua estrutura, exemplo:
   - Contexto: "HomeView"
-    - HomeView (pasta: )
+    - HomeView (pasta)
       - HomeView.vue
       - partials (pasta: partes menores da view principal, no caso a HomeView)
       - locales (pasta: internacionalização local, no caso apenas para a HomeView e seus partials)
@@ -39,5 +39,6 @@ A estrutura do projeto considera que, a "store" estará disponível para todos o
         - mutations.js
         - state.js
     - router
-      - HomeRouters
+      - HomeRouters (pasta)
+        - index.js (centraliza todas as rotas e sub-rotas do contexto HomeView)
 #### Propósito: **Centralizar tudo em um único contexto de fácil indentificação**
